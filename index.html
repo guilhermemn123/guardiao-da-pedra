@@ -1,90 +1,77 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>O Guardião da Pedra</title>
   <style>
     body {
-      font-family: 'Georgia', serif;
-      background-color: #f7f4ed;
-      color: #2e2b26;
-      padding: 40px;
+      font-family: Georgia, serif;
+      background: #f4f1ec;
+      color: #222;
+      padding: 30px;
       max-width: 800px;
       margin: auto;
       line-height: 1.6;
-      text-align: center;
     }
 
-    #conteudo {
-      margin-bottom: 30px;
+    h1 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    .reveal {
       opacity: 0;
-      transition: opacity 1s ease-in;
-      white-space: pre-line;
+      transition: opacity 1s ease;
+      margin-top: 20px;
+    }
+
+    .reveal.visible {
+      opacity: 1;
     }
 
     .pedra {
-      display: inline-block;
-      background-color: #4a9bcf;
-      color: white;
-      padding: 14px 30px;
-      font-size: 18px;
-      border-radius: 50px;
+      color: #0066cc;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      user-select: none;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      text-decoration: underline;
     }
 
     .pedra:hover {
-      background-color: #337fb2;
-    }
-
-    .fade-in {
-      opacity: 1 !important;
+      color: #004a99;
     }
   </style>
 </head>
 <body>
-
   <h1>📘 O Guardião da Pedra</h1>
 
-  <div id="conteudo">Clique na <span class="pedra" onclick="mostrarProximo()">pedra</span> para começar a história.</div>
+  <p>
+    Clique na palavra <span class="pedra" onclick="revelarHistoria()">pedra</span> para revelar a história.
+  </p>
+
+  <div id="historia" class="reveal">
+    <h2>Capítulo 1: A Estranha Caverna da Luz Azul</h2>
+    <p>
+      Jorge era um garoto de 16 anos, morador de uma cidade entediante no interior de Minas Gerais...
+      [coloque o restante da sua história aqui como desejar]
+    </p>
+
+    <h2>Capítulo 2: O Menino da Luz</h2>
+    <p>
+      Nos dias seguintes, Jorge enfrentou enormes desafios...
+    </p>
+
+    <h2>Capítulo 3: A Lenda Antiga</h2>
+    <p>
+      Anos se passaram — para Jorge, foram apenas semanas...
+    </p>
+  </div>
 
   <script>
-    const trechos = [
-      "Capítulo 1: A Estranha Caverna da Luz Azul\n\nJorge era um garoto de 16 anos, morador de uma cidade entediante no interior de Minas Gerais...",
-      "Em uma tarde quente de sábado, ele avistou uma fenda entre as rochas emanando uma luz azul...",
-      "A caverna era fria e úmida. Jorge ouviu o eco dos seus passos...",
-      "Movido pela curiosidade, tocou a pedra e uma explosão de luz o envolveu...",
-      "Ao abrir os olhos, estava em uma floresta pré-histórica. Ele havia viajado no tempo.",
-
-      "Capítulo 2: O Menino da Luz\n\nJorge sobreviveu escondido, comendo frutas e observando a tribo...",
-      "Ajudou os homens das cavernas a fazer fogo. A pedra azul brilhou. Eles o chamaram de Zarh-Tah.",
-      "Criou armas melhores, abrigos e ensinou a desenhar símbolos. A tribo começou a mudar.",
-      "Mesmo com desconfiança de Barkh, Jorge provou seu valor e se tornou parte da tribo.",
-
-      "Capítulo 3: A Lenda Antiga\n\nA tribo prosperou. Jorge era um símbolo de sabedoria.",
-      "Certa noite, a pedra brilhou novamente. Era hora de partir.",
-      "De volta ao presente, viu seu retrato em uma pintura antiga. A lenda do Homem da Luz.",
-      "A pedra desapareceu, mas Jorge sabia: ele havia sido eternizado no tempo."
-    ];
-
-    let indice = 0;
-
-    function mostrarProximo() {
-      const conteudo = document.getElementById("conteudo");
-      conteudo.classList.remove("fade-in");
-      void conteudo.offsetWidth; // força o reflow para reiniciar a animação
-      if (indice < trechos.length) {
-        conteudo.innerHTML = trechos[indice] + "\n\n<span class='pedra' onclick='mostrarProximo()'>Toque na pedra</span>";
-        indice++;
-        conteudo.classList.add("fade-in");
-      } else {
-        conteudo.innerHTML = "Fim da história. <br><br><span class='pedra' style='cursor: default;'>🟦</span>";
-        conteudo.classList.add("fade-in");
-      }
+    function revelarHistoria() {
+      const historia = document.getElementById('historia');
+      historia.classList.add('visible');
     }
   </script>
-
 </body>
 </html>
