@@ -5,142 +5,92 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>O Guardião da Pedra</title>
   <style>
-    body {<div id="capa" style="text-align: center;">
-  <img src="capa.jpg" alt="Capa do Guardião da Pedra" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 20px #000;">
-  <br><br>
-  <button onclick="iniciarHistoria()" style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 8px; background-color: #005a8d; color: white; cursor: pointer;">
-    Entrar na História
-  </button>
-</div>
-
-<div id="historia" style="display: none;">
-  <!-- aqui começam os capítulos normalmente -->
-</div>
-
+    body {
       font-family: Georgia, serif;
-      background: #f4f1ec;
-      color: #222;
+      background: url('floresta.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fdfdfd;
       padding: 30px;
       max-width: 800px;
       margin: auto;
       line-height: 1.6;
+      backdrop-filter: brightness(0.9);
     }
-
     h1 {
       text-align: center;
       font-size: 2em;
     }
-
     .reveal {
       opacity: 0;
       transition: opacity 1s ease;
       margin-top: 20px;
     }
-
     .visible {
       opacity: 1;
     }
-
     .pedra {
-      color: #0066cc;
+      color: #00ccff;
       cursor: pointer;
       font-weight: bold;
       text-decoration: underline;
     }
-
     .pedra:hover {
-      color: #004a99;
+      color: #66e0ff;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #005a8d;
+      color: white;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <h1>📘 O Guardião da Pedra</h1>
-
-  <div id="cap1" class="reveal visible">
-    <h2>Capítulo 1: A Estranha Caverna da Luz Azul</h2>
-    <p>
-      Jorge era um garoto de 16 anos, morador de uma cidade entediante no interior de Minas Gerais. Ele era sempre curioso e amava aventuras,passava as tardes explorando matas e cavernas ao redor da cidade. Enquanto a maioria dos seus amigos ficavam em casa jogando ou no celular, Jorge preferia descobrir trilhas escondidas e imaginar que era um desbravador.
-
-Em uma tarde quente de sábado, enquanto caminhava por uma trilha esquecida, ele avistou uma fenda entre as rochas, escondida por cipós e folhas secas, emanando uma luz azul. Sem hesitar, afastou os galhos e se enfiou na abertura. Após poucos metros percebeu que não era apenas uma fenda, mas sim uma caverna
-
-A caverna era fria e úmida. A cada passo, o som de seus sapatos sobre o chão de pedra começa a ecoar ainda mais, e o cheiro de terra antiga estava impregnado no ar. Quando pensou em voltar, não quis abandonar o mistério da luz azul, fraca mas constante, que iluminava as paredes da caverna. Curioso, Jorge avançou até se deparar com uma pedra oval, de cor azul cristalina, escondida entre rochas no centro da clareira subterrânea. Parecia viva, como se chamasse-o para encontrá-la.
-
-“O que será isso?”, murmurou Jorge.
-
-Movido pela curiosidade, tocou a pedra e no instante seguinte, uma explosão de luz azul o envolveu. O chão tremeu e Jorge sentiu seu corpo ser puxado por uma força mas não conseguia enxergar devido a forte luz azul. Uma sensação de queda, um frio no estômago e, de repente, um enorme silêncio o rodeava.
-
-Quando abriu os olhos, estava em meio a uma densa floresta, com árvores gigantes, arbustos altos e um céu limpo e azul. O ar era diferente, mais puro, mas carregado com o cheiro de animais selvagens. Ele tentou pegar o celular, mas não havia sinal. Nem ruas, nem postes, nem casas.
-
-Caminhando, ainda confuso devido a falta de respostas, deparou-se com criaturas pré-históricas: cervos gigantes, aves enormes e, não muito longe dali, um grupo de homens primitivos. Eram fortes, sujos, com cabelos longos e que usavam peles de animais como roupas. Ao notá-lo, pararam e o observaram com olhos desconfiados.
-    </p>
-    <p>
-      Quando a <span class="pedra" onclick="mostrarCap2()">pedra</span> azul, agora inexplicavelmente pendurada em seu pescoço, começou a brilharos homens recuaram, murmurando sons guturais. Jorge havia viajado no tempo. E agora percebeu que estava preso na pré-história.
-    </p>
+  <div id="capa" style="text-align: center;">
+    <img src="capa.jpg" alt="Capa do Guardião da Pedra" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 20px #000;">
+    <br><br>
+    <button onclick="iniciarHistoria()">Entrar na História</button>
   </div>
 
-  <div id="cap2" class="reveal">
-    <h2>Capítulo 2: O Menino da Luz</h2>
-    <p>
-      Nos dias seguintes, Jorge enfrentou enormes desafios. Sem saber como se comunicar, sobrevivese escondendo e se alimentando de frutas e raízes. Mas a solidão e o medo o forçaram a tentar se aproximar da tribo.
+  <div id="historia" style="display: none;">
+    <h1>📘 O Guardião da Pedra</h1>
 
-Um dia, ele viu um grupo de caçadores tentando fazer fogo com gravetos de forma desajeitada, sem sucesso. Sabendo como acender fogo da forma certa, Jorge se aproximou, calmamente, e pegou duas pedras secas e uma folha, mostrando o atrito até surgir uma faísca. Em poucos minutos, uma pequena chama nasceu.
+    <div id="cap1" class="reveal visible">
+      <h2>Capítulo 1: A Estranha Caverna da Luz Azul</h2>
+      <p>Jorge era um garoto de 16 anos, morador de uma cidade entediante no interior de Minas Gerais.Ele era sempre curioso e amava aventuras,passava as tardes explorando matas e cavernas ao redor da cidade. Enquanto a maioria dos seus amigos ficavam em casa jogando ou no celular, Jorge preferia descobrir trilhas escondidas e imaginar que era um desbravador. Em uma tarde quente de sábado, enquanto caminhava por uma trilha esquecida, ele avistou uma fenda entre as rochas, escondida por cipós e folhas secas, emanando uma luz azul. Sem hesitar, afastou os galhos e se enfiou na abertura. Após poucos metros percebeu que não era apenas uma fenda, mas sim uma caverna A caverna era fria e úmida. A cada passo, o som de seus sapatos sobre o chão de pedra começa a ecoar ainda mais, e o cheiro de terra antiga estava impregnado no ar. Quando pensou em voltar, não quis abandonar o mistério da luz azul, fraca mas constante, que iluminava as paredes da caverna. Curioso, Jorge avançou até se deparar com uma pedra oval, de cor azul cristalina, escondida entre rochas no centro da clareira subterrânea. Parecia viva, como se chamasse-o para encontrá-la. “O que será isso?”, murmurou Jorge. Movido pela curiosidade, tocou a pedra e no instante seguinte, uma explosão de luz azul o envolveu. O chão tremeu e Jorge sentiu seu corpo ser puxado por uma força mas não conseguia enxergar devido a forte luz azul. Uma sensação de queda, um frio no estômago e, de repente, um enorme silêncio o rodeava. Quando abriu os olhos, estava em meio a uma densa floresta, com árvores gigantes, arbustos altos e um céu limpo e azul. O ar era diferente, mais puro, mas carregado com o cheiro de animais selvagens. Ele tentou pegar o celular, mas não havia sinal. Nem ruas, nem postes, nem casas. Caminhando, ainda confuso devido a falta de respostas, deparou-se com criaturas pré-históricas: cervos gigantes, aves enormes e, não muito longe dali, um grupo de homens primitivos. Eram fortes, sujos, com cabelos longos e que usavam peles de animais como roupas. Ao notá-lo, pararam e o observaram com olhos desconfiados.
+.</p>
+      <p>Quando a <span class="pedra" onclick="mostrarCap2()">pedra</span> azul, agora inexplicavelmente pendurada em seu pescoço, começou a brilhar</p>
+    </div> os homens recuaram, murmurando sons guturais. Jorge havia viajado no tempo. E agora percebeu que estava preso na pré-história
 
-Os homens das cavernas se espantaram. Grunhidos de surpresa ecoaram, e aos poucos, se aproximaram. Notaram que a pedra azul no pescoço do estranho brilhava mais forte sob o reflexo da chama. Um dos anciãos da tribo apontou para Lucas e murmurou algo que soou como “Zarh-Tah”, que ele entendeu como Homem-Luz.
+    <div id="cap2" class="reveal">
+      <h2>Capítulo 2: O Menino da Luz</h2>
+      <p>Nos dias seguintes, Jorge enfrentou enormes desafios. Sem saber como se comunicar, sobrevivese escondendo e se alimentando de frutas e raízes. Mas a solidão e o medo o forçaram a tentar se aproximar da tribo. Um dia, ele viu um grupo de caçadores tentando fazer fogo com gravetos de forma desajeitada, sem sucesso. Sabendo como acender fogo da forma certa, Jorge se aproximou, calmamente, e pegou duas pedras secas e uma folha, mostrando o atrito até surgir uma faísca. Em poucos minutos, uma pequena chama nasceu. Os homens das cavernas se espantaram. Grunhidos de surpresa ecoaram, e aos poucos, se aproximaram. Notaram que a pedra azul no pescoço do estranho brilhava mais forte sob o reflexo da chama. Um dos anciãos da tribo apontou para Lucas e murmurou algo que soou como “Zarh-Tah”, que ele entendeu como Homem-Luz. Conquistando a confiança deles, Jorge passou a acompanhar a tribo. Ele percebeu que, apesar de fortes, viviam de forma extremamente vulnerável: o fogo só vinha quando os raios atingiam árvores, as armas eram muito simples e desajeitadas, e a comunicação se limitava a gestos e sons. A primeira grande mudança veio quando Jorge sugeriu afiar pedaços de pedra e amarrá-los nas pontas das lanças da tribo. Utilizando cipós e resina de árvores, criou as primeiras lanças com ponta de pedra. As caçadas ficaram mais eficazes, e os caçadores voltavam com mais carne e menos ferimentos. Depois, ao observar a forma como tentavam se organizar nas cavernas, Jorge teve outra ideia: construir abrigos com galhos e peles, organizados em semicírculo, no canto de uma montanha, com uma fogueira central. Isso trouxe mais segurança contra predadores e aproximou os grupos, favorecendo a troca de informações e a proteção mútua. Outra contribuição importante veio quando ele começou a desenhar nas paredes. Usou carvão queimado e alguns pigmentos naturais para fazer símbolos: um cervo para simbolizar caça, ondas para água, chamas para fogo e marcas para quantidade. Aos poucos, os homens passaram a imitar os símbolos feitos por Jorge e usar os desenhos para se orientar. Nascia ali a primeira forma de comunicação pictográfica. Mas nem tudo foi fácil. Alguns caçadores mais velhos desconfiavam dele. Um deles, um líder guerreiro chamado Barkh, via o menino como possível ameaça. Houve conflitos, discussões e tentativas de expulsá-lo. Mas a sabedoria de um ancião, Or-Tah, manteve o garoto no grupo.</p>
+   Em algumas ocasiões, Jorge salvou vidas ensinando a ferver água para evitar doenças e construir armadilhas para se proteger de predadores    
+<p>Passou a ser chamado de Zarh-Tah, o Menino da Luz, o enviado da <span class="pedra" onclick="mostrarCap3()">pedra</span> brilhante.</p>
+    </div>
 
-Conquistando a confiança deles, Jorge passou a acompanhar a tribo. Ele percebeu que, apesar de fortes, viviam de forma extremamente vulnerável: o fogo só vinha quando os raios atingiam árvores, as armas eram muito simples e desajeitadas, e a comunicação se limitava a gestos e sons.
-
-A primeira grande mudança veio quando Jorge sugeriu afiar pedaços de pedra e amarrá-los nas pontas das lanças da tribo. Utilizando cipós e resina de árvores, criou as primeiras lanças com ponta de pedra. As caçadas ficaram mais eficazes, e os caçadores voltavam com mais carne e menos ferimentos.
-
-Depois, ao observar a forma como tentavam se organizar nas cavernas, Jorge teve outra ideia: construir abrigos com galhos e peles, organizados em semicírculo, no canto de uma montanha, com uma fogueira central. Isso trouxe mais segurança contra predadores e aproximou os grupos, favorecendo a troca de informações e a proteção mútua.
-
-Outra contribuição importante veio quando ele começou a desenhar nas paredes. Usou carvão queimado e alguns pigmentos naturais para fazer símbolos: um cervo para simbolizar caça, ondas para água, chamas para fogo e marcas para quantidade. Aos poucos, os homens passaram a imitar os símbolos feitos por Jorge e usar os desenhos para se orientar. Nascia ali a primeira forma de comunicação pictográfica.
-
-Mas nem tudo foi fácil. Alguns caçadores mais velhos desconfiavam dele. Um deles, um líder guerreiro chamado Barkh, via o menino como possível ameaça. Houve conflitos, discussões e tentativas de expulsá-lo. Mas a sabedoria de um ancião, Or-Tah, manteve o garoto no grupo.
-    <p>
-      Em algumas ocasiões, Jorge salvou vidas ensinando a ferver água para evitar doenças e construir armadilhas para se proteger de predadores Passou a ser chamado de Zarh-Tah, o Menino da Luz, o enviado da <span class="pedra" onclick="mostrarCap3()">pedra</span> brilhante.
-    </p>
-  </div>
-
-  <div id="cap3" class="reveal">
-    <h2>Capítulo 3: A Lenda Antiga</h2>
-    <p>
-      Anos se passaram — para Jorge, foram apenas semanas, mas naquela época o tempo se media de forma diferente. A tribo prosperou com sua ajuda. A aldeia cresceu, a comida era mais farta, e o fogo constante iluminava as noites que antes eram frias. Os símbolos nas cavernas se multiplicaram, marcando os feitos e caçadas, registrando as estações e prevenindo perigos.
-
-Certa noite, sob um céu estrelado, Jorge percebeu a pedra azul no seu pescoço brilhar intensamente, como no dia que a encontrou. Um calor suave tomou conta de seu corpo. Os anciãos da tribo se reuniram em torno da fogueira e, em silêncio, entenderam: era hora de Zarh-Tah partir.
-
-Or-Tah aproximou-se, colocou a mão sobre o ombro de Jorge e disse em tom grave:
-
-— Zarh-Tah… Lahm-Huk… (O tempo te chama.)
-
-Emocionado, Jorge se despediu da tribo que agora o via como herói e mentor. Tocou a pedra azul, e mais uma vez a luz o envolveu.
-
-Quando abriu os olhos, estava de volta à caverna. Seu celular indicava que haviam se passado apenas 10 minutos desde que havia saído.
-
-Confuso, mas aliviado, ele correu até a cidade. Na biblioteca, vasculhou os livros sobre arqueologia e pinturas rupestres. Em uma enciclopédia antiga, encontrou a imagem de uma pintura numa caverna na Espanha: mostrava um homem jovem, de cabelos curtos, com uma pedra brilhante no pescoço, cercado por figuras tribais.
-
-A legenda dizia: “A Lenda do Homem da Luz — possível figura mítica da pré-história.”
-
-Um sorriso se abriu no seu rosto. Ele compreendeu que havia sido uma peça perdida, mas essencial, na história da humanidade.
-    </p>
-    <p>
-      A pedra azul, no entanto, jamais foi vista novamente. Mas ele sabia… que em algum lugar no tempo, seu nome havia sido eternizado.
-    </p>
+    <div id="cap3" class="reveal">
+      <h2>Capítulo 3: A Lenda Antiga</h2>
+          Anos se passaram — para Jorge, foram apenas semanas, mas naquela época o tempo se media de forma diferente. A tribo prosperou com sua ajuda. A aldeia cresceu, a comida era mais farta, e o fogo constante iluminava as noites que antes eram frias. Os símbolos nas cavernas se multiplicaram, marcando os feitos e caçadas, registrando as estações e prevenindo perigos. Certa noite, sob um céu estrelado, Jorge percebeu a pedra azul no seu pescoço brilhar intensamente, como no dia que a encontrou. Um calor suave tomou conta de seu corpo. Os anciãos da tribo se reuniram em torno da fogueira e, em silêncio, entenderam: era hora de Zarh-Tah partir. Or-Tah aproximou-se, colocou a mão sobre o ombro de Jorge e disse em tom grave: — Zarh-Tah… Lahm-Huk… (O tempo te chama.) Emocionado, Jorge se despediu da tribo que agora o via como herói e mentor. Tocou a pedra azul, e mais uma vez a luz o envolveu. Quando abriu os olhos, estava de volta à caverna. Seu celular indicava que haviam se passado apenas 10 minutos desde que havia saído. Confuso, mas aliviado, ele correu até a cidade. Na biblioteca, vasculhou os livros sobre arqueologia e pinturas rupestres. Em uma enciclopédia antiga, encontrou a imagem de uma pintura numa caverna na Espanha: mostrava um homem jovem, de cabelos curtos, com uma pedra brilhante no pescoço, cercado por figuras tribais. A legenda dizia: “A Lenda do Homem da Luz — possível figura mítica da pré-história.” Um sorriso se abriu no seu rosto. Ele compreendeu que havia sido uma peça perdida, mas essencial, na história da humanidade.
+      <p>A pedra azul, no entanto, jamais foi vista novamente</p>
+Mas ele sabia… que em algum lugar no tempo, seu nome havia sido eternizado.
+    </div>
   </div>
 
   <script>
+    function iniciarHistoria() {
+      document.getElementById("capa").style.display = "none";
+      document.getElementById("historia").style.display = "block";
+    }
     function mostrarCap2() {
       document.getElementById('cap2').classList.add('visible');
     }
-
     function mostrarCap3() {
       document.getElementById('cap3').classList.add('visible');
     }
   </script>
-<script>
-  function iniciarHistoria() {
-    document.getElementById("capa").style.display = "none";
-    document.getElementById("historia").style.display = "block";
-  }
-
 </body>
 </html>
