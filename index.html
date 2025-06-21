@@ -5,7 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>O Guardião da Pedra</title>
   <style>
-    body {
+    body {<div id="capa" style="text-align: center;">
+  <img src="capa.jpg" alt="Capa do Guardião da Pedra" style="max-width: 100%; height: auto; border-radius: 12px; box-shadow: 0 0 20px #000;">
+  <br><br>
+  <button onclick="iniciarHistoria()" style="padding: 10px 20px; font-size: 16px; border: none; border-radius: 8px; background-color: #005a8d; color: white; cursor: pointer;">
+    Entrar na História
+  </button>
+</div>
+
+<div id="historia" style="display: none;">
+  <!-- aqui começam os capítulos normalmente -->
+</div>
+
       font-family: Georgia, serif;
       background: #f4f1ec;
       color: #222;
@@ -42,17 +53,6 @@
     }
   </style>
 </head>
-  </body {
-  font-family: Georgia, serif;
-  background: url('floresta.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fdfdfd;
-  padding: 30px;
-  max-width: 800px;
-  margin: auto;
-  line-height: 1.6;
-  backdrop-filter: brightness(0.9);
-}
 <body>
   <h1>📘 O Guardião da Pedra</h1>
 
@@ -136,5 +136,11 @@ Um sorriso se abriu no seu rosto. Ele compreendeu que havia sido uma peça perdi
       document.getElementById('cap3').classList.add('visible');
     }
   </script>
+<script>
+  function iniciarHistoria() {
+    document.getElementById("capa").style.display = "none";
+    document.getElementById("historia").style.display = "block";
+  }
+
 </body>
 </html>
